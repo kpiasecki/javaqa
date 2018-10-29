@@ -3,7 +3,7 @@ package com.company;
 public class Piano extends Instrument {
 
     Piano(InstrumentColour colour) {
-        super(colour);
+        super.setColour(colour);
     }
 
     @Override

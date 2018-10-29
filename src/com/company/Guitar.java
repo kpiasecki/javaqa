@@ -3,7 +3,7 @@ package com.company;
 public class Guitar extends Instrument {
 
     Guitar(InstrumentColour colour) {
-        super(colour);
+        super.setColour(colour);
     }
 
     @Override

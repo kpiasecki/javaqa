@@ -1,22 +1,20 @@
 package com.company;
 
-public class Instrument {
+public abstract class Instrument {
 
     private InstrumentColour colour;
 
-    public Instrument() {
-
-    }
-
-    public Instrument(InstrumentColour colour) {
-        this.colour = colour;
+    public String getKind(){
+        return "Instrument";
     }
 
     public InstrumentColour getColour(){
         return colour;
     }
 
-    public String play() {
-        return "dsffgfdsfsf";
+    public void setColour(InstrumentColour colour){
+        this.colour = colour;
     }
+
+    public abstract String play();
 }
