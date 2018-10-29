@@ -4,20 +4,17 @@ public class Main {
 
     public static void main(String[] args) {
 
-        SimpleObject obj = new SimpleObject();
-        System.out.println("s = " + obj.s + " " + ", i = " + obj.i);
-        obj.setNewValues(obj.s, obj.i);
-        System.out.println("s = " + obj.s + " " + ", i = " + obj.i);
-        obj.setNewValues(obj);
-        System.out.println("s = " + obj.s + " " + ", i = " + obj.i);
+        System.out.println(InstrumentColour.YELLOW);
+        System.out.println(InstrumentColour.WHITE);
+        System.out.println(InstrumentColour.BLUE);
+        System.out.println(InstrumentColour.RED);
+
         System.out.println();
 
-        System.out.println("Apple".contains("a"));
-        System.out.println("Orange.length() = " + "Orange".length());
-        System.out.println("Raspberry".replace("R", "r").replace("b", "B"));
-        System.out.println("Apple Orange Raspberry".replaceFirst("\\w+", "Tomato"));
-        System.out.println("Apple Orange Raspberry".replaceAll("\\w+", "Tomato"));
-
+        System.out.println(InstrumentColour2.YELLOW);
+        System.out.println(InstrumentColour2.WHITE);
+        System.out.println(InstrumentColour2.BLUE);
+        System.out.println(InstrumentColour2.RED);
     }
 }
 
