@@ -1,110 +1,64 @@
 package com.company;
 
+import com.sun.org.apache.xerces.internal.impl.dv.xs.BooleanDV;
+import com.sun.org.apache.xpath.internal.operations.Bool;
+
+import static java.lang.System.out;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("If-else statement");
+        Example e = new Example();
 
-        boolean a = true;
-        if (a) {
-            System.out.println("It is true");
-        } else {
-            System.out.println("It is false");
-        }
+        System.out.println(e.i);
+        System.out.println(e.b);
+        System.out.println(e.c);
+        System.out.println(e.d);
 
         System.out.println();
 
-
-        System.out.println("switch statement");
-
-        int n = 2;
-        switch (n) {
-            case 1:
-                System.out.println("It is one");
-                break;
-            case 2:
-                System.out.println("It is two");
-                break;
-            default:
-                System.out.println("Unknown number");
-        }
+        System.out.println(e.getValue());
+        e.i = 45;
+        System.out.println(e.getValue());
 
         System.out.println();
 
-
-        System.out.println("for statement");
-
-        for (int i = 0; i <= 10; i++) {
-            System.out.println(i);
-        }
-
+        out.println("out.println()");
         System.out.println();
 
-        for (int i = 0, j = 0; i <= 10 && j <= 20; i++, j = i * 2) {
-            System.out.println("i = " + i + ", j = " + j);
-        }
-
+        System.out.println(Example.n);
+        Example e2 = new Example(24);
+        System.out.println(Example.n);
         System.out.println();
 
-        System.out.println("for-each statement");
-
-        int[] numArray = {0, 1, 2, 3};
-        for (int i : numArray) {
-            System.out.println(i);
-        }
-
-        System.out.println();
-
-        for (char c : "Java".toCharArray()) {
-            System.out.print(c + " ");
-        }
-
-        System.out.println();
-        System.out.println();
-
-        System.out.println("while statement");
-
-        int i = 5;
-        while (i-- > 0) {
-            System.out.println(i);
-        }
+        System.out.println(Example.staticMethod());
         System.out.println();
 
 
-        System.out.println("do-while statement");
+        System.out.println(e);
+        System.out.println();
 
-
-        int j = 5;
-        do {
-            System.out.println(j);
-        } while (j-- > 0);
-
+        System.out.println(e.getValue());
+        System.out.println(e.getValue(5000));
         System.out.println();
 
 
-        System.out.println("break statement");
+        Integer a = 5;
+        int b = 6;
+        Integer d = 10;
+        a = b;
+        b = a;
+        e = null;
+        b = a;
+        boolean c = a == b;
+        c = a < d;
 
-        int k = 5;
-        while (k-- > 0) {
-            System.out.println(k);
-            if (k == 3) {
-                break;
-            }
-        }
-
+        System.out.println("a = " +  a);
+        System.out.println("b = " +  b);
+        System.out.println("c = " +  c);
+        System.out.println("d = " +  d);
         System.out.println();
-
-
-        System.out.println("continue statement");
-
-        int q = 5;
-        while (q-- > 0) {
-            if (q == 3) {
-                continue;
-            }
-            System.out.println(q);
-        }
-
     }
 }
+
