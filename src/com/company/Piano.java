@@ -1,6 +1,6 @@
 package com.company;
 
-public class Piano extends Instrument {
+public class Piano extends Instrument implements Music{
 
     Piano(InstrumentColour colour) {
         super.setColour(colour);

@@ -1,6 +1,6 @@
 package com.company;
 
-public class Guitar extends Instrument {
+public class Guitar extends Instrument implements Music {
 
     Guitar(InstrumentColour colour) {
         super.setColour(colour);
