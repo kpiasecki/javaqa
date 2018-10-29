@@ -6,23 +6,34 @@ public class Main {
 
     public static void main(String[] args) {
 
+        /*
         List<Instrument> instruments = new ArrayList<>();
         instruments.add(new Piano(InstrumentColour.BLUE));
         instruments.add(new Guitar(InstrumentColour.BLUE));
         instruments.add(new Guitar(InstrumentColour.WHITE));
         instruments.add(new Piano(InstrumentColour.YELLOW));
+        System.out.println(instruments.get(10));
+        */
 
-        for(Instrument instrument : instruments) {
-            System.out.println(instrument);
-            System.out.println(instrument.getKind());
-            System.out.println(instrument.getColour());
-            System.out.println(instrument.play());
-            System.out.println();
+
+        try {
+            List<Instrument> instruments = new ArrayList<>();
+            instruments.add(new Piano(InstrumentColour.BLUE));
+            instruments.add(new Guitar(InstrumentColour.BLUE));
+            instruments.add(new Guitar(InstrumentColour.WHITE));
+            instruments.add(new Piano(InstrumentColour.YELLOW));
+
+            System.out.println(instruments.get(10));
+
+        } /*catch (Exception e) {
+            e.getMessage();
+        }*/catch (IndexOutOfBoundsException e){
+            System.out.println("List has four elements!");
+        } finally {
+            System.out.println("finally");
         }
 
-        Music m = new Piano(InstrumentColour.BLUE);
-        System.out.println(m);
-
+        System.out.println("end");
     }
 }
 
