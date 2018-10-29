@@ -3,84 +3,108 @@ package com.company;
 public class Main {
 
     public static void main(String[] args) {
-        
-        System.out.println("Assignment Operator");
 
-        int a;
-        a = 6;
-        int b = 5;
+        System.out.println("If-else statement");
 
-        int c = 4, d = 0, e = 44;
-
-        System.out.println(a);
-        System.out.println(b);
-        System.out.println(c);
-        System.out.println(d);
-        System.out.println(e);
-
-        System.out.println();
-
-        System.out.println("Arithmetic Operators");
-
-        a = 5 % 3;
-        System.out.println("a = " + a);
-
-        a *= 5;
-        System.out.println("a * 5 = " + a);
-
-        a++;
-        System.out.println("a++ -> " + a);
-
-        a--;
-        System.out.println("a-- -> " + a);
-
-        System.out.println();
-
-        System.out.println("String Concatenation Operator");
-
-        String s = "Hello" + " " + "World" + "!";
-        System.out.println(s);
+        boolean a = true;
+        if (a) {
+            System.out.println("It is true");
+        } else {
+            System.out.println("It is false");
+        }
 
         System.out.println();
 
 
-        System.out.println("Relational Operators");
+        System.out.println("switch statement");
 
-        boolean f = 10 < 45;
-
-        System.out.println(5 == 1);
-        System.out.println(1 != 2);
-        System.out.println(4 > 1);
-        System.out.println(4 >= 1);
-        System.out.println(5 < 1);
-        System.out.println(2 >= 1);
-
-        System.out.println();
-
-        System.out.println("Boolean Logical Operators");
-
-        System.out.println(!true);
-        System.out.println(true && false);
-        System.out.println(true || false);
-        System.out.println(true & false);
-        System.out.println(true & false);
+        int n = 2;
+        switch (n) {
+            case 1:
+                System.out.println("It is one");
+                break;
+            case 2:
+                System.out.println("It is two");
+                break;
+            default:
+                System.out.println("Unknown number");
+        }
 
         System.out.println();
 
-        System.out.println("Ternary Operators");
 
-        System.out.println(1 < 2 ? true : false);
-        System.out.println(1 > 2 ? true : false);
-        System.out.println(1 < 2 ? "Hello" : "World");
+        System.out.println("for statement");
+
+        for (int i = 0; i <= 10; i++) {
+            System.out.println(i);
+        }
+
+        System.out.println();
+
+        for (int i = 0, j = 0; i <= 10 && j <= 20; i++, j = i * 2) {
+            System.out.println("i = " + i + ", j = " + j);
+        }
 
         System.out.println();
 
-        System.out.println("Bitwise Operators");
+        System.out.println("for-each statement");
 
-        System.out.println(2 & 1);
-        System.out.println(2 | 1);
-        System.out.println(1 << 1);
+        int[] numArray = {0, 1, 2, 3};
+        for (int i : numArray) {
+            System.out.println(i);
+        }
 
         System.out.println();
+
+        for (char c : "Java".toCharArray()) {
+            System.out.print(c + " ");
+        }
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println("while statement");
+
+        int i = 5;
+        while (i-- > 0) {
+            System.out.println(i);
+        }
+        System.out.println();
+
+
+        System.out.println("do-while statement");
+
+
+        int j = 5;
+        do {
+            System.out.println(j);
+        } while (j-- > 0);
+
+        System.out.println();
+
+
+        System.out.println("break statement");
+
+        int k = 5;
+        while (k-- > 0) {
+            System.out.println(k);
+            if (k == 3) {
+                break;
+            }
+        }
+
+        System.out.println();
+
+
+        System.out.println("continue statement");
+
+        int q = 5;
+        while (q-- > 0) {
+            if (q == 3) {
+                continue;
+            }
+            System.out.println(q);
+        }
+
     }
 }
